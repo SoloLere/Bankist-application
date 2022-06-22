@@ -67,6 +67,12 @@ const tabs = document.querySelectorAll('.operations__tab');
 const tabsContainer = document.querySelector('.operations__tab-container');
 const tabsContent = document.querySelectorAll('.operations__content');
 
+// new feature
+
+const newFeature = function(){
+  console.log('Welcome to the application')
+};
+
 tabsContainer.addEventListener('click', function (e) {
   const clicked = e.target.closest('.operations__tab');
   // console.log(clicked);
@@ -79,7 +85,7 @@ tabsContainer.addEventListener('click', function (e) {
   clicked.classList.add('operations__tab--active');
   // console.log(clicked.dataset.tab);
   const dataValue = clicked.dataset.tab;
-
+  newFeature();
   // show Tab content in the content section 
   // tabsContent.forEach(e => {
   //   e.classList.remove('operations__content--active')
